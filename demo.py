@@ -1,13 +1,15 @@
 from __future__ import print_function
 from __future__ import division
 
-import os, sys, numpy as np, ast
-import init_paths
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+
+import os
 import load_models
 from lib.utils import benchmark_utils, util
 import tensorflow as tf
-import cv2, time, scipy, scipy.misc as scm, sklearn.cluster, skimage.io as skio, numpy as np, argparse
-import matplotlib.pyplot as plt
+import cv2, time, scipy, scipy.misc as scm, sklearn.cluster, numpy as np, argparse
 from sklearn.cluster import DBSCAN
 
 def mean_shift(points_, heat_map, iters=5):
